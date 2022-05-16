@@ -1,0 +1,26 @@
+{
+  "name": "insteon-desktop-app",
+  "version": "1.0.0",
+  "description": "Application Running Natively on Desktop Device Handling Scheduling",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DVMatthew/Insteon-Desktop-App.git"
+  },
+  "author": "Matthew Nowacki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DVMatthew/Insteon-Desktop-App/issues"
+  },
+  "homepage": "https://github.com/DVMatthew/Insteon-Desktop-App#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "electron": "^18.2.0",
+    "electron-reloader": "^1.2.3",
+    "jquery": "^3.6.0",
+    "mongoose": "^6.3.2"
+  }
+}
