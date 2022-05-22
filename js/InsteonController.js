@@ -4,7 +4,7 @@ var fs = require("fs");
 var InsteonDevice = require("./Models/Device");
 
 var DB_URI = "mongodb://127.0.0.1:27017/insteon";
-var HUB_URI = "http://192.168.1.29:25105";
+var HUB_URI = "http://192.168.1.12:25105";
 var HUB_TOKEN = "TXVnZ2xlc3c6bEZLalFFQWI=";
 
 const deviceData = [];
@@ -74,6 +74,7 @@ function deviceControl(deviceID, status, mode) {
     .post(currentMode, {}, options)
     .then((res) => {
       console.log(res);
+      return (actionComplete = true);
     })
     .catch((err) => {
       console.log(err);
@@ -83,5 +84,3 @@ function deviceControl(deviceID, status, mode) {
 function hubStatus(hubUrl) {}
 
 function deviceStatus(deviceID) {}
-
-function scheduleDevice(hour, minute, second) {}

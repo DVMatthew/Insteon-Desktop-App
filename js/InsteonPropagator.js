@@ -13,7 +13,7 @@ async function listDevices() {
     console.log(deviceID);
     const status = devices[i].status;
     $("#device-row").append(
-      $(`<div class="col">`).append(
+      $(`<div class="col-md-6">`).append(
         $(`<div id="device-card">`).append(
           $(
             `<h5>${deviceName}<h5> <p id="dev-id">${deviceID}</p> <button id="on-btn" onclick="deviceControl('${deviceID}', null, 'ON');">On</button> <button onclick="deviceControl('${deviceID}', null, 'OFF');" id="off-btn">Off</button>`
