@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 var axios = require("axios");
 var fs = require("fs");
-var InsteonDevice = require("./Models/Device");
+var InsteonDevice = require("../Models/Device");
 
 var DB_URI = "mongodb://127.0.0.1:27017/insteon";
 var HUB_URI = "http://192.168.1.12:25105";

@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 
 const WIDTH = 840;
@@ -17,8 +17,32 @@ const createWindow = () => {
 
   win.webContents.openDevTools();
 
-  win.loadFile("index.htm");
+  win.loadFile("./html/index.htm");
 };
+
+const schedulingWindow = () => {
+  const schedulingWindow = new BrowserWindow({
+    width: WIDTH,
+    height: HEIGHT,
+    webPreferences: {
+      preload: path.join(__dirname, "preload.js"),
+      nodeIntegration: true,
+      contextIsolation: false,
+    },
+  });
+
+  schedulingWindow.webContents.openDevTools();
+
+  schedulingWindow.once("ready-to-show", () => {
+    schedulingWindow.show();
+  });
+
+  schedulingWindow.loadFile("./html/scheduler.htm");
+};
+
+ipcMain.on("openSchedulerWindow", (e, arg) => {
+  schedulingWindow();
+});
 
 app.whenReady().then(() => {
   createWindow();

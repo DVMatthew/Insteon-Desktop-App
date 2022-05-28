@@ -1,0 +1,93 @@
+body {
+  background-color: rgb(79, 79, 79);
+}
+
+* {
+  color: rgb(206, 206, 206);
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  padding: 20px 10px 10px 10px;
+}
+
+header h3 {
+  font-size: 35px;
+}
+
+.container {
+  text-align: center;
+  width: 80%;
+}
+
+input {
+  padding: 3px 15px 3px 15px;
+  background-color: #333;
+  border-radius: 10px;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+#current-time {
+  font-style: bold;
+  margin-bottom: 5px;
+}
+
+/* Add Device Area*/
+#add-button {
+  border-radius: 40px;
+  padding: 3px 15px 3px 15px;
+  transition: ease 0.3s;
+  margin-top: 10px;
+  border: 1px solid rgb(239, 42, 42);
+  background-color: rgba(249, 98, 98, 0.3);
+}
+
+#add-button:hover {
+  transition: ease 0.3s;
+  background-color: rgba(249, 98, 98, 1);
+}
+
+/* Device Card Section */
+#device-card {
+  background-color: #333;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 10px 10px 10px 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 90%;
+  width: 100%;
+  box-shadow: 0px 0px 3px black;
+}
+
+#device-card h5 {
+  font-family: "Roboto", sans-serif;
+}
+#device-card button {
+  background-color: rgba(249, 98, 98, 0.3);
+  transition: ease 0.3s;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 3px 15px 3px 15px;
+  border: 1px solid rgb(239, 42, 42);
+  border-radius: 40px;
+}
+
+#device-card button:hover {
+  transition: ease 0.3s;
+  background-color: rgba(249, 98, 98, 1);
+}
+
+.scheduleTxt {
+  display: inline;
+}
+
+.scheduleDiv {
+}

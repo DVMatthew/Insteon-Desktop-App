@@ -1,6 +1,15 @@
-var InsteonDevice = require("./Models/Device");
-
+var InsteonDevice = require("../Models/Device");
+var ipc = require("electron").ipcRenderer;
 var actionComplete = true;
+
+var button = document.getElementById("scheduling-window");
+button.addEventListener("click", () => {
+  schedulingWindow();
+});
+
+function schedulingWindow() {
+  ipc.send("openSchedulerWindow");
+}
 
 async function scheduleDevices(hour, minute, second) {
   const devices = await InsteonDevice.find();
